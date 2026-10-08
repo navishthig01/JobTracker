@@ -215,7 +215,9 @@ The following features are not currently implemented but represent realistic nex
 
 ## Screenshots
 
-> Screenshots of the finished application will be added here.
+### JobTrack Dashboard
+
+![JobTrack Dashboard](screenshots/jobtrack-dashboard.png)
 
 ---
 
