@@ -84,7 +84,7 @@ function App() {
 
   /* ── Fetch all jobs on mount ── */
   useEffect(() => {
-    fetch("http://localhost:5000/api/jobs")
+    fetch(`${import.meta.env.VITE_API_URL}/api/jobs`)
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch jobs");
         return response.json();
@@ -113,7 +113,7 @@ function App() {
     const newJob = { company, role, status };
 
     try {
-      const response = await fetch("http://localhost:5000/api/jobs", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/jobs`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newJob),
@@ -143,7 +143,7 @@ function App() {
   /* ── Update job status ── */
   const updateStatus = async (id, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/jobs/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/jobs/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
@@ -159,7 +159,7 @@ function App() {
   const deleteJob = async (id) => {
     setDeleteError("");
     try {
-      const response = await fetch(`http://localhost:5000/api/jobs/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/jobs/${id}`, {
         method: "DELETE",
       });
       if (!response.ok) {
