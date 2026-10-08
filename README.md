@@ -106,8 +106,8 @@ Job Tracker/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/job-tracker.git
-cd job-tracker
+git clone https://github.com/navishthig01/JobTracker.git
+cd JobTracker
 ```
 
 **2. Install frontend dependencies**
